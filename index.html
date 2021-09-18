@@ -20,11 +20,11 @@
                     </div>
                     <nav class="header__menu">
                         <ul class="header__list">
-                            <li class="header__link"><a href="#">Приглашение</a></li>
-                            <li class="header__link"><a href="#">Программа дня</a></li>
-                            <li class="header__link"><a href="#">Локация</a></li>
-                            <li class="header__link"><a href="#">Dress Code</a></li>
-                            <li class="header__link"><a href="#">Обратная связь</a></li>
+                            <li class="header__link"><a class="activelink" href="#message">Приглашение</a></li>
+                            <li class="header__link"><a href="#programme">Программа дня</a></li>
+                            <li class="header__link"><a href="#location">Локация</a></li>
+                            <li class="header__link"><a href="#dresscode">Dress Code</a></li>
+                            <li class="header__link"><a href="#attend">Обратная связь</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -50,7 +50,7 @@
                 <div class="trasition">
                     <div class="transition__line"></div>
                 </div>
-                <div class="message">
+                <div id="message" class="message row">
                     <div class="container">
                         <div class="message__title title">Дорогие наши и любимые!</div>
                         <div class="message__text">
@@ -64,7 +64,7 @@
                 <div class="trasition">
                     <div class="transition__line"></div>
                 </div>
-                <div class="programme">
+                <div id="programme" class="programme row">
                     <div class="container">
                         <div class="programme__stitle title">Программа дня</div>
                     </div>
@@ -122,7 +122,7 @@
                 <div class="trasition">
                     <div class="transition__line"></div>
                 </div>
-                <div class="location">
+                <div id="location" class="location row">
                     <div class="container">
                         <div class="location__first">
                             <div class="location__title title">Место проведения торжества</div>
@@ -154,7 +154,7 @@
                 <div class="trasition">
                     <div class="transition__line"></div>
                 </div>
-                <div class="dresscode">
+                <div id="dresscode" class="dresscode row">
                     <div class="container">
                         <div class="dresscode__title title">Dress code</div>
                         <div class="dresscode__subtitle subtitle">Нам будет очень приятно, если Вы учтете наши пожелания и, при выборе одежды, предпочтёте наряды в представленной ниже гамме</div>
@@ -166,7 +166,7 @@
                 <div class="trasition">
                     <div class="transition__line"></div>
                 </div>
-                <div class="attend">
+                <div id="attend" class="attend row">
                     <div class="attend__title title">ПОДТВЕРДИТЕ, ПОЖАЛУЙСТА,<br>СВОЁ ПРИСУТСТВИЕ НА ТОРЖЕСТВЕ</div>
                     <div class="attend__subtitle subtitle">ВАШИ ОТВЕТЫ НА ВОПРОСЫ<br>ОЧЕНЬ ПОМОГУТ НАМ ПРИ ОРГАНИЗАЦИИ СВАДЬБЫ</div>
                     <div class="attend__body">
@@ -176,21 +176,21 @@
                         <div class="attend__right">
                             <div class="form__label subtitle">будем ждать ответ до 01/04/2022</div>
                             <div>
-                                <form action="#" class="attend__form form">
+                                <form id="form" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off" class="attend__form form">
                                     <div class="form__attend">
                                         <div class="form__title_m form__title">Присутствие</div>
                                         <label>
-                                            <input required type="radio" name="attend">
+                                            <input id="attendance" required type="radio" name="entry.64225791" checked="checked" value="Я приду / Мы придем">
                                             <div class="circle"></div>
                                             <span>Я приду / Мы придем</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name="attend">
+                                            <input id="attendance" type="radio" name="entry.64225791" value="Не смогу прийти">
                                             <div class="circle"></div>
                                             <span>Буду со своей парой</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name="attend">
+                                            <input id="attendance" type="radio" name="entry.64225791" value="Не смогу прийти">
                                             <div class="circle"></div>
                                             <span>Не смогу прийти</span>
                                         </label>
@@ -199,14 +199,14 @@
                                         <div class="form__title">Имя</div>
                                         <div class="form__if">если Вы будете с парой, то внесите оба имени</div>
                                         <div class="name_group">
-                                            <input required type="text" name="Имя" class="form__input">
+                                            <input id="name" required type="text" name="entry.1370578207" class="form__input" value="">
                                             <span class="focus-border"></span>
                                         </div>
                                     </div>
                                     <div class="form__lastname">
                                         <div class="form__title">Фамилия</div>
                                         <div class="name_group">
-                                            <input required type="text" name="Фамилия" class="form__input">
+                                            <input id="lastname" required type="text" name="entry.673764942" class="form__input" value="">
                                             <span class="focus-border"></span>
                                         </div>
                                     </div>
@@ -214,23 +214,23 @@
                                         <div class="form__title">Предпочтения по напиткам</div>
                                         <div class="form__choice">
                                             <label class="checkbox_container subtitle" style="margin-bottom: 13px;">Вино
-                                                <input type="checkbox" value="Вино">
+                                                <input id="preference" type="checkbox" value="Вино" name="entry.355307671">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="checkbox_container subtitle" style="margin-bottom: 13px;">Виски
-                                                <input type="checkbox" value="Виски">
+                                                <input id="preference" type="checkbox" value="Виски" name="entry.355307671">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="checkbox_container subtitle" style="margin-bottom: 13px;">Водка
-                                                <input type="checkbox" value="Водка">
+                                                <input id="preference" type="checkbox" value="Водка" name="entry.355307671">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="checkbox_container subtitle" style="margin-bottom: 13px;">Шампанское
-                                                <input type="checkbox" value="Шампанское">
+                                                <input id="preference" type="checkbox" value="Шампанское" name="entry.355307671">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="checkbox_container subtitle" style="margin-bottom: 13px;">Что-нибудь безалкогольное
-                                                <input type="checkbox" value="Что-нибудь">
+                                                <input id="preference" type="checkbox" value="Что-нибудь безалкогольное" name="entry.355307671">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
@@ -239,7 +239,7 @@
                                         <button type="submit">Отправить</button>
                                     </div>
                                 </form>
-                                <div class="form__success">Спасибо за Ваши ответы! Если что-то изменится пожалуйста сообщите нам!</div>
+                                <div id="success" class="form__success">Спасибо за Ваши ответы! Если что-то изменится пожалуйста сообщите нам!</div>
                             </div>
                         </div>
                     </div>
@@ -253,7 +253,7 @@
                 <div class="fullscreen__cover">
                     <div class="fullscreen__body">
                         <h1 class="fullscreen__title">Заказать электронное приглашение на свадьбу по ссылке:</h1>
-                        <a href="#" class="fullscreen__link">Заказать</a>
+                        <a href="https://www.instagram.com/wedding.qr/" class="fullscreen__link">Заказать</a>
                     </div>
                 </div>
             </div>
@@ -266,6 +266,62 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- JS -->
     <script src="js/script.js"></script>
+    <!-- google sheets -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function postToGoogle() {
+          var field1 = $('input[name="entry.64225791"]:checked').val();
+          var field2 = $("#name").val();
+          var field3 = $("#lastname").val();
+          // var field4 = $("#cinema").val();
+    
+          var favorite = [];
+          $.each($("input[name='entry.355307671']:checked"), function(){
+            favorite.push($(this).val());
+          });
+          var field4 = favorite.join(", ");
+    
+          if (field1 == "") {
+            alert('Please Fill Your Attendance');
+            document.getElementById("attendance").focus();
+            return false;
+          }
+          if (field2 == "") {
+            alert('Please Fill Your Name');
+            document.getElementById("name").focus();
+            return false;
+          }
+          if (field3 == "") {
+            alert('Please Fill Your Lastname');
+            document.getElementById("lastname").focus();
+            return false;
+          }
+    
+    
+    
+    
+          $.ajax({
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSfyRs0mB4ye0UVRh32PUHRbtcBWosUnzlvwKrXEgJw5rIXjsw/formResponse?",
+            data: {
+              "entry.64225791": field1,
+              "entry.1370578207": field2,
+              "entry.673764942": field3,
+              "entry.355307671": field4
+            },
+            type: "POST",
+            dataType: "xml",
+            success: function(d) {},
+            error: function(x, y, z) {
+    
+    
+              $('#form').hide();
+              $('#success').show();
+    
+            }
+          });
+          return false;
+        }
+      </script>
 </body>
 
 </html>
